@@ -1,0 +1,24 @@
+{
+  "name": "Organization searcher for GitHub",
+  "short_name": "OrgSearcher",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "This adds a search option to Github fork dialog.",
+  "web_accessible_resources": ["searchicon.png"],
+  "permissions": [
+    "https://api.github.com/*"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "css": ["dashboard.css"],
+      "js": ["dashboard.js"]
+    }
+  ]
+}
+
+
+
+
+
